@@ -19,6 +19,13 @@ module.exports = function (config) {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true
     },
+    customLaunchers: {
+      // chrome setup for travis CI using chromium
+      Chrome_travis_ci: {
+          base: 'Chrome',
+          flags: [' --no-sandbox']
+      }
+   },
     angularCli: {
       environment: 'dev'
     },
