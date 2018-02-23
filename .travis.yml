@@ -7,5 +7,5 @@ node_js:
   - node
 
 script:
-  - karma start --single-run  --browsers ChromeHeadles
+  - karma start --single-run  --browsers ChromeHeadless
 
