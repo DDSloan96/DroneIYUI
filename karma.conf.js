@@ -4,6 +4,7 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
+    browsers:  ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
     frameworks: ['jasmine', '@angular/cli'],
     plugins: [
       require('karma-jasmine'),
@@ -21,8 +22,8 @@ module.exports = function (config) {
     },
     customLaunchers: {
       // chrome setup for travis CI using chromium
-      Chrome_travis_ci: {
-          base: 'Chrome',
+      ChromeHeadlessNoSandbox: {
+          base: 'ChromeHeadless',
           flags: [' --no-sandbox']
       }
    },
